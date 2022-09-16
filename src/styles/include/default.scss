@@ -1,0 +1,135 @@
+// Default SCSS
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	min-width: 320px;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	outline: 0;
+}
+
+svg {
+	min-width: 1%;
+	min-height: 1%;
+	max-width: 100%;
+	max-height: 100%;
+	height: auto;
+}
+
+ul, ol {
+	padding: 0;
+	margin: 0;
+	li {
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+p {
+	margin-top: 0;
+}
+
+a {
+	outline: 0;
+}
+
+figure {
+	margin: 0;
+}
+
+.sr-only {
+	display: none;
+}
+
+button,
+input[type=button],
+input[type=submit] {
+	outline: 0;
+	cursor: pointer;
+	user-select: none;
+	&:focus {
+		outline: 0;
+	}
+}
+
+button {
+	padding: 0;
+	border: 0;
+	background: transparent;
+}
+
+textarea { 
+	appearance: none; 
+	resize: none; 
+}
+
+hr { 
+	border: 0;
+	border-bottom: 1px solid gray;
+}
+
+input[type='text'],
+input[type='number'],
+input[type='tel'],
+input[type='email'] {
+	appearance: none;
+}
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	appearance: none;
+}
+
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-ms-appearance: none;
+	appearance: none;
+	outline: 0;
+	box-shadow: none;
+	border: 0;
+	background: white;
+	background-image: none;
+}
+select::-ms-expand {
+	display: none;
+}
+
+picture {
+	display: block;
+}
+
+iframe {
+	border: 0;
+	overflow: hidden;
+}
+
+.__web-inspector-hide-shortcut__ {
+	display: none !important;
+}
+
+// Media like BS4
+$sm: 'min-width: 576px';
+$md: 'min-width: 768px';
+$lg: 'min-width: 992px';
+$xl: 'min-width: 1200px';
+$xxl: 'min-width: 1600px';

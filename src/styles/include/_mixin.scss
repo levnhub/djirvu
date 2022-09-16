@@ -1,0 +1,90 @@
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content};
+	&::-moz-placeholder {@content};
+	&:-moz-placeholder {@content};
+	&:-ms-input-placeholder {@content}; 
+}
+
+@mixin clearfix {
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+@mixin grayscale {
+	filter: gray; // IE6-9
+	filter: grayscale(1); // Microsoft Edge and Firefox 35+
+	-webkit-filter: grayscale(1); // Google Chrome, Safari 6+ & Opera 15+
+}
+
+@mixin background-flatout {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: -9999px;
+		right: -9999px;
+		z-index: -1;
+		background: inherit;
+	}
+}
+
+@mixin disabled {
+	&[disabled],
+	&-disabled,
+	&.disabled {
+		opacity: .4;
+		pointer-events: none;
+	}
+}
+
+@mixin excerpt($lines: 3) {
+	overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+}
+
+@mixin autofill-disable {
+	&:-internal-autofill-selected {
+		background: none;
+	}
+	&:-webkit-autofill,
+	&:-webkit-autofill:hover, 
+	&:-webkit-autofill:focus, 
+	&:-webkit-autofill:active {
+  	box-shadow: 0 0 0 30px white inset !important;
+  	-webkit-box-shadow: 0 0 0 30px white inset !important;
+	}
+}
+
+// Loading placeholder
+
+@keyframes placeholder {
+  0% { background: #fff; }
+  50% { background: #ccc; }
+  100% { background: #fff; }
+}
+
+@mixin loading_placeholder {
+  background: #fff;
+  border-radius: 4px;
+  animation-name: placeholder;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  &.active {
+   background: transparent; 
+   border: 0;
+   border-radius: 0;
+   min-height: auto;
+   animation: none;
+  }
+}

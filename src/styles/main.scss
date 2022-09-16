@@ -1,0 +1,100 @@
+// Main SCSS File
+@import "./include/_mixin.scss";
+@import "./include/default.scss";
+
+// Vars
+$white: #FFF;
+$black: #000;
+$primary: blue;
+
+$font-title: Helvetica, Arial, sans-serif; 
+$font-text: Helvetica, Arial, sans-serif; 
+
+::-moz-selection { background: lighten($primary, 25%); }
+::selection { background: lighten($primary, 25%); }
+
+// Typography, Links, Buttons
+html, body {
+	font: normal 16px $font-text;
+	color: $black;
+	background: $white;
+}
+
+@for $index from 1 through 6 {
+	h#{$index} {
+		margin-top: 0;
+		font-family: $font-title;
+	}
+}
+
+.link {
+	color: $primary;
+	transition: .2s;
+	text-decoration: none;
+	&:hover {
+		text-decoration: none;
+		color: darken($primary, 10%);
+	}
+	&-alt {
+		color: $white;
+		&:hover {
+			color: darken($white, 15%);
+		}
+	}
+}
+
+a {
+	@extend .link;
+}
+
+.app {
+  position: relative;
+  text-align: center;
+  background: #222222;
+  &--bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: no-repeat center url('../assets/img/full-band.jpeg');
+    background-size: cover;
+    mix-blend-mode: overlay;
+  }
+}
+
+.app_logo {
+  height: 200px;
+  pointer-events: none;
+	@media ($xxl) {
+		height: 400px;
+	}
+}
+
+.app_header {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  z-index: 1;
+  &--title {
+    font-size: calc(10px + 2vmin);
+    font-weight: normal;
+    margin: 0;
+  }
+}
+
+.social_media {
+  margin-top: 2rem;
+  &--link {
+    padding: 1rem;
+    color: #61dafb;
+  }
+  &--icon {
+    width: 2rem;
+    height: 2rem;
+  }
+}
