@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from './logo.svg';
 import './styles/main.scss';
 import telegram from './assets/svg/telegram.svg';
@@ -9,15 +8,15 @@ function App() {
   const socialMedia = ['telegram', 'vk', 'youtube'];
 
   const socialMediaIconSrc: { [index: string]: any } = {
-    telegram: telegram,
-    vk: vk,
-    youtube: youtube,
+    telegram,
+    vk,
+    youtube,
   };
 
   const socialMediaLink: { [index: string]: any } = {
-    telegram: 'https://t.me/jrvut',
-    vk: 'https://vk.ru/jrvut',
-    youtube: 'https://www.youtube.com/channel/UCMycG6fL5fIFvQi1fr2NmHQ',
+    telegram: 'https://t.me/djirvu',
+    vk: 'https://vk.ru/djirvu',
+    youtube: 'https://www.youtube.com/@djirvu',
   };
 
   return (
