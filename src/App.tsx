@@ -3,29 +3,30 @@ import './styles/main.scss';
 import telegram from './assets/svg/telegram.svg';
 import vk from './assets/svg/vk.svg';
 import youtube from './assets/svg/youtube.svg';
+import bandlink from './assets/svg/bandlink.svg';
 
 function App() {
-  const socialMedia = ['telegram', 'vk', 'youtube'];
+  const socialMedia = ['telegram', 'vk', 'youtube', 'bandlink'];
 
   const socialMediaIconSrc: { [index: string]: any } = {
     telegram,
     vk,
     youtube,
+    bandlink,
   };
 
   const socialMediaLink: { [index: string]: any } = {
     telegram: 'https://t.me/djirvu',
     vk: 'https://vk.ru/djirvu',
     youtube: 'https://www.youtube.com/@djirvu',
+    bandlink: 'https://band.link/djirvu',
   };
 
   return (
     <div className="app">
       <header className="app_header">
         <img src={logo} className="app_logo" alt="Джинсы Рвутся логотип" />
-        <h1 className="app_header--title">
-          Панк-кор группа из Санкт-Петербурга
-        </h1>
+        <h1 className="app_header--title">Панк-кор с берегов Невы</h1>
         <div className="social_media">
           {socialMedia.map((item) => (
             <a
@@ -37,7 +38,7 @@ function App() {
             >
               <img
                 src={socialMediaIconSrc[item]}
-                alt={`${socialMediaIconSrc[item]} icon `}
+                alt={`${socialMediaIconSrc[item]} icon`}
                 className={'social_media--icon'}
               />
             </a>
