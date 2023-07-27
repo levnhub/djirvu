@@ -1,5 +1,5 @@
-# JRvut band offical website
+# Официальная страница панк-кор группы Джинсы Рвутся
 
 ## 0.1.0
 
-Landing page with logo, band photo & social networks links.
+Разводящая страница с логотипом, фото группы и ссылками на социальный сети.
