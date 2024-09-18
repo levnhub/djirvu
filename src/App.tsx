@@ -3,15 +3,17 @@ import './styles/main.scss';
 import telegram from './assets/svg/telegram.svg';
 import vk from './assets/svg/vk.svg';
 import youtube from './assets/svg/youtube.svg';
+import rutube from './assets/svg/rutube.svg';
 import bandlink from './assets/svg/bandlink.svg';
 
 function App() {
-  const socialMedia = ['telegram', 'vk', 'youtube', 'bandlink'];
+  const socialMedia = ['telegram', 'vk', 'youtube', 'rutube', 'bandlink'];
 
   const socialMediaIconSrc: { [index: string]: any } = {
     telegram,
     vk,
     youtube,
+    rutube,
     bandlink,
   };
 
@@ -19,6 +21,7 @@ function App() {
     telegram: 'https://t.me/djirvu',
     vk: 'https://vk.ru/djirvu',
     youtube: 'https://www.youtube.com/@djirvu',
+    rutube: 'https://rutube.ru/channel/43034911/',
     bandlink: 'https://band.link/djirvu',
   };
 
